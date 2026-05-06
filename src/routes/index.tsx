@@ -3,7 +3,7 @@ import { useEffect, useRef, useState } from "react";
 import { Landing } from "@/components/anniversary/Landing";
 import { Timeline } from "@/components/anniversary/Timeline";
 import { Gallery } from "@/components/anniversary/Gallery";
-import { Reasons } from "@/components/anniversary/Reasons";
+import { Promises } from "@/components/anniversary/Promises";
 import { Games } from "@/components/anniversary/Games";
 import { LoveLetter } from "@/components/anniversary/LoveLetter";
 import { Surprise } from "@/components/anniversary/Surprise";

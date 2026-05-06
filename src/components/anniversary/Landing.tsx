@@ -64,14 +64,6 @@ export function Landing({ onJourney, musicOn, toggleMusic }: Props) {
         </Button>
       </motion.div>
 
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 2 }}
-        className="absolute bottom-6 text-xs text-muted-foreground sm:bottom-8 sm:text-sm"
-      >
-        ↓ scroll down ↓
-      </motion.div>
     </section>
   );
 }
