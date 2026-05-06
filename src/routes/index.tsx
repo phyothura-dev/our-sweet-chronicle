@@ -86,7 +86,7 @@ function Index() {
         <Timeline />
       </div>
       <Gallery />
-      <Reasons />
+      <Promises />
       <Games />
       <LoveLetter />
       <Surprise />
