@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import confetti from "canvas-confetti";
-import { Button } from "@/components/ui/button";
 import { Gift } from "lucide-react";
 
 export function Surprise() {
@@ -26,17 +25,17 @@ export function Surprise() {
   };
 
   return (
-    <section className="px-4 pb-32 pt-16 sm:px-6">
+    <section className="px-4 pb-24 pt-12 sm:px-6 sm:pb-32 sm:pt-16">
       <div className="mx-auto max-w-2xl text-center">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="mb-4 text-5xl text-primary sm:text-6xl"
+          className="mb-3 text-4xl text-primary sm:text-6xl"
         >
           One More Surprise... 🎁
         </motion.h2>
-        <p className="mb-10 text-muted-foreground">အောက်က button လေးနှိပ်ကြည့်ပါ ✨</p>
+        <p className="mb-8 text-sm text-muted-foreground sm:mb-10 sm:text-base">ဘေဘီ အောက်က button လေးနှိပ်ကြည့်ပါ ✨</p>
 
         <AnimatePresence mode="wait">
           {!opened ? (
@@ -47,11 +46,11 @@ export function Surprise() {
                 whileTap={{ scale: 0.95 }}
                 animate={{ y: [0, -8, 0] }}
                 transition={{ y: { repeat: Infinity, duration: 2 } }}
-                className="rounded-full bg-gradient-to-br from-primary to-accent p-12 shadow-2xl"
+                className="rounded-full bg-gradient-to-br from-primary to-accent p-10 shadow-2xl sm:p-12"
               >
-                <Gift className="h-24 w-24 text-primary-foreground" />
+                <Gift className="h-20 w-20 text-primary-foreground sm:h-24 sm:w-24" />
               </motion.button>
-              <p className="mt-6 text-sm text-muted-foreground">Click to open 💝</p>
+              <p className="mt-5 text-sm text-muted-foreground sm:mt-6">Click to open 💝</p>
             </motion.div>
           ) : (
             <motion.div
@@ -59,27 +58,20 @@ export function Surprise() {
               initial={{ opacity: 0, scale: 0.5 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ type: "spring", duration: 0.8 }}
-              className="rounded-3xl bg-gradient-to-br from-card via-card to-primary/20 p-8 shadow-2xl sm:p-12"
+              className="rounded-3xl bg-gradient-to-br from-card via-card to-primary/20 p-6 shadow-2xl sm:p-12"
             >
-              <p className="text-6xl">💍✨</p>
-              <h3 className="mt-6 text-4xl text-primary sm:text-5xl">
-                I Love You, <br />Forever & Always 💕
+              <p className="text-5xl sm:text-6xl">💍✨</p>
+              <h3 className="mt-5 text-3xl text-primary sm:mt-6 sm:text-5xl">
+                ကိုကို Loves ဘေဘီ, <br />Forever & Always 💕
               </h3>
-              <p className="mt-6 text-lg leading-relaxed text-foreground/80">
+              <p className="mt-5 text-base leading-relaxed text-foreground/80 sm:mt-6 sm:text-lg">
                 ဒီတစ်နှစ်တာဟာ စတင်တာပဲရှိသေးတယ်။ <br />
                 ရှေ့ဆက်ပြီး ၁၀ နှစ်၊ ၂၀ နှစ်၊ နှစ်ပေါင်းများစွာ — <br />
-                <span className="font-display text-2xl text-primary">မင်းနဲ့အတူ ငါရှိနေချင်တယ်။</span>
+                <span className="font-display text-xl text-primary sm:text-2xl">ဘေဘီနဲ့အတူ ကိုကိုရှိနေချင်တယ်။</span>
               </p>
-              <p className="mt-8 text-sm text-muted-foreground">
-                Happy 1st Anniversary, my love 🤍
+              <p className="mt-6 text-xs text-muted-foreground sm:mt-8 sm:text-sm">
+                Happy 1st Anniversary, ဘေဘီ 🤍
               </p>
-              <Button
-                onClick={open}
-                variant="outline"
-                className="mt-6 rounded-full"
-              >
-                More confetti! 🎊
-              </Button>
             </motion.div>
           )}
         </AnimatePresence>
