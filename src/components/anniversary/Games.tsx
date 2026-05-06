@@ -7,17 +7,17 @@ export function Games() {
   const [tab, setTab] = useState<"quiz" | "memory">("quiz");
 
   return (
-    <section className="px-4 py-24 sm:px-6">
+    <section className="px-4 py-16 sm:px-6 sm:py-24">
       <div className="mx-auto max-w-3xl">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="mb-4 text-center text-5xl text-primary sm:text-6xl"
+          className="mb-3 text-center text-4xl text-primary sm:text-6xl"
         >
           Fun Time 🎮
         </motion.h2>
-        <p className="mb-8 text-center text-muted-foreground">Let's play together 💕</p>
+        <p className="mb-6 text-center text-sm text-muted-foreground sm:mb-8 sm:text-base">ကိုကိုနဲ့ဘေဘီ အတူကစားကြမယ် 💕</p>
 
         <div className="mb-6 flex justify-center gap-2">
           <button

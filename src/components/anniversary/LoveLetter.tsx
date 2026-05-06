@@ -1,17 +1,17 @@
 import { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
 
-const letter = `My dearest love,
+const letter = `My dearest ဘေဘီ,
 
-ဒီတစ်နှစ်တာဟာ ကျွန်တော့်ဘဝမှာ အလှဆုံးနှစ်တစ်နှစ်ပဲ။
-မင်းရဲ့အပြုံးတိုင်းက ငါ့နေ့ရက်တွေကို လင်းစေတယ်။
-မင်းရဲ့ရယ်သံတိုင်းက ငါ့အတွက် သီချင်းဖြစ်တယ်။
+ဒီတစ်နှစ်တာဟာ ကိုကို့ဘဝမှာ အလှဆုံးနှစ်တစ်နှစ်ပဲ။
+ဘေဘီရဲ့အပြုံးတိုင်းက ကိုကို့နေ့ရက်တွေကို လင်းစေတယ်။
+ဘေဘီရဲ့ရယ်သံတိုင်းက ကိုကို့အတွက် သီချင်းဖြစ်တယ်။
 
-မင်းနဲ့အတူ ရှိခြင်းဟာ ငါ့အတွက် ကံကောင်းမှုတစ်ခုပါ။
+ဘေဘီနဲ့အတူ ရှိခြင်းဟာ ကိုကို့အတွက် ကံကောင်းမှုတစ်ခုပါ။
 ရှေ့ဆက်နှစ်ပေါင်းများစွာ — အတူတူ၊ လက်တွဲပြီး၊ ချစ်ခြင်းနဲ့။
 
 Forever yours,
-🤍`;
+ကိုကို 🤍`;
 
 export function LoveLetter() {
   const [text, setText] = useState("");
@@ -41,20 +41,20 @@ export function LoveLetter() {
   }, [started]);
 
   return (
-    <section ref={ref} className="px-4 py-24 sm:px-6">
+    <section ref={ref} className="px-4 py-16 sm:px-6 sm:py-24">
       <div className="mx-auto max-w-2xl">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="mb-4 text-center text-5xl text-primary sm:text-6xl"
+          className="mb-3 text-center text-4xl text-primary sm:text-6xl"
         >
-          A Letter for You ✍️
+          A Letter for ဘေဘီ ✍️
         </motion.h2>
-        <p className="mb-10 text-center text-muted-foreground">From my heart, to yours.</p>
+        <p className="mb-8 text-center text-sm text-muted-foreground sm:mb-10 sm:text-base">From ကိုကို's heart, to ဘေဘီ.</p>
 
-        <div className="rounded-3xl bg-card/90 p-8 shadow-xl backdrop-blur sm:p-10">
-          <pre className="font-display whitespace-pre-wrap text-2xl leading-relaxed text-foreground sm:text-3xl">
+        <div className="rounded-3xl bg-card/90 p-5 shadow-xl backdrop-blur sm:p-10">
+          <pre className="font-display whitespace-pre-wrap text-xl leading-relaxed text-foreground sm:text-3xl">
             <span className="cursor-blink">{text}</span>
           </pre>
         </div>

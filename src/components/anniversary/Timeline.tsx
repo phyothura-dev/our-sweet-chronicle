@@ -4,7 +4,7 @@ const events = [
   {
     date: "ပထမဆုံးတွေ့ခဲ့တဲ့နေ့",
     title: "First Meeting 👀",
-    caption: "မင်းကိုပထမဆုံးတွေ့တုန်းက နှလုံးသား ခုန်တာ မရပ်တော့ဘူး။",
+    caption: "ဘေဘီကိုပထမဆုံးတွေ့တုန်းက ကိုကိုနှလုံးသား ခုန်တာ မရပ်တော့ဘူး။",
     img: "https://images.unsplash.com/photo-1518621736915-f3b1c41bfd00?w=800&q=80",
   },
   {
@@ -16,19 +16,19 @@ const events = [
   {
     date: "First 'I love you' 💌",
     title: "ပထမဆုံးပြောခဲ့တဲ့စကား",
-    caption: "မင်းကိုချစ်တယ်လို့ပြောခဲ့တဲ့အခိုက်အတန့်ကို ဘယ်တော့မှမမေ့ပါဘူး။",
+    caption: "ဘေဘီကိုချစ်တယ်လို့ပြောခဲ့တဲ့အခိုက်အတန့်ကို ကိုကိုဘယ်တော့မှမမေ့ပါဘူး။",
     img: "https://images.unsplash.com/photo-1502635385003-ee1e6a1a742d?w=800&q=80",
   },
   {
     date: "Adventures Together 🌍",
     title: "အမှတ်တရခရီးများ",
-    caption: "မင်းနဲ့အတူရှိရင် နေရာတိုင်းက အိမ်လိုခံစားရတယ်။",
+    caption: "ဘေဘီနဲ့အတူရှိရင် နေရာတိုင်းက အိမ်လိုခံစားရတယ်။",
     img: "https://images.unsplash.com/photo-1529635509242-960e7b9ce39c?w=800&q=80",
   },
   {
     date: "1 Year Together 🎉",
     title: "ဒီနေ့",
-    caption: "နှစ်တစ်နှစ်ပြည့်ပြီ။ ရှေ့ဆက်ပြီးတော့လည်း မင်းနဲ့ပဲ။",
+    caption: "နှစ်တစ်နှစ်ပြည့်ပြီ။ ရှေ့ဆက်ပြီးတော့လည်း ဘေဘီနဲ့ပဲ။",
     img: "https://images.unsplash.com/photo-1518199266791-5375a83190b7?w=800&q=80",
   },
 ];
@@ -46,7 +46,7 @@ export function Timeline() {
           Our Journey 💞
         </motion.h2>
         <p className="mb-16 text-center text-muted-foreground">
-          ကျွန်တော်တို့ရဲ့ပုံပြင်လေး...
+          ကိုကိုနဲ့ဘေဘီရဲ့ပုံပြင်လေး...
         </p>
 
         <div className="relative">

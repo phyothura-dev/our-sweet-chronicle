@@ -4,22 +4,22 @@ import { Button } from "@/components/ui/button";
 
 const questions = [
   {
-    q: "ငါအကြိုက်ဆုံးအစားအစာက ဘာလဲ?",
+    q: "ကိုကိုအကြိုက်ဆုံးအစားအစာက ဘာလဲ?",
     options: ["Pizza 🍕", "Sushi 🍣", "Mohinga 🍜", "Ice cream 🍦"],
     answer: 2,
   },
   {
-    q: "ငါတို့ပထမဆုံးတွေ့ခဲ့တဲ့နေရာက?",
+    q: "ကိုကိုနဲ့ဘေဘီ ပထမဆုံးတွေ့ခဲ့တဲ့နေရာက?",
     options: ["Coffee shop ☕", "School 🏫", "Park 🌳", "Online 💻"],
     answer: 0,
   },
   {
-    q: "ငါ့အကြိုက်ဆုံးအရောင်က?",
+    q: "ကိုကို့အကြိုက်ဆုံးအရောင်က?",
     options: ["Pink 💗", "Blue 💙", "Black 🖤", "Green 💚"],
     answer: 0,
   },
   {
-    q: "ငါ့အကြိုက်ဆုံးရာသီက?",
+    q: "ကိုကို့အကြိုက်ဆုံးရာသီက?",
     options: ["နွေ ☀️", "မိုး 🌧️", "ဆောင်း ❄️", "နွေဦး 🌸"],
     answer: 1,
   },
@@ -54,8 +54,8 @@ export function Quiz() {
 
   return (
     <div className="rounded-3xl bg-card/90 p-6 shadow-xl backdrop-blur sm:p-8">
-      <h3 className="mb-2 text-3xl text-primary">ငါ့ကိုဘယ်လောက်သိလဲ? 🤔</h3>
-      <p className="mb-6 text-sm text-muted-foreground">A little quiz about me 💕</p>
+      <h3 className="mb-2 text-2xl text-primary sm:text-3xl">ကိုကို့ကို ဘေဘီဘယ်လောက်သိလဲ? 🤔</h3>
+      <p className="mb-6 text-sm text-muted-foreground">A little quiz about ကိုကို 💕</p>
 
       <AnimatePresence mode="wait">
         {!done ? (
@@ -91,7 +91,7 @@ export function Quiz() {
             <p className="text-6xl">🎀</p>
             <p className="mt-4 text-2xl">Score: {score} / {questions.length}</p>
             <p className="mt-2 text-muted-foreground">
-              {score === questions.length ? "Perfect! မင်းငါ့ကိုအသိဆုံးပဲ 💖" : "ပိုပြီးနီးကပ်ဖို့ အချိန်တွေအများကြီးရှိသေးတယ် 🥰"}
+              {score === questions.length ? "Perfect! ဘေဘီက ကိုကို့ကို အသိဆုံးပဲ 💖" : "ပိုပြီးနီးကပ်ဖို့ အချိန်တွေအများကြီးရှိသေးတယ် 🥰"}
             </p>
             <Button onClick={reset} className="mt-6 rounded-full">Play again</Button>
           </motion.div>
