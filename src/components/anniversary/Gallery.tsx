@@ -15,19 +15,19 @@ export function Gallery() {
   const [active, setActive] = useState<number | null>(null);
 
   return (
-    <section className="px-4 py-24 sm:px-6">
+    <section className="px-4 py-16 sm:px-6 sm:py-24">
       <div className="mx-auto max-w-6xl">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="mb-4 text-center text-5xl text-primary sm:text-6xl"
+          className="mb-3 text-center text-4xl text-primary sm:text-6xl"
         >
           Our Memories 📸
         </motion.h2>
-        <p className="mb-12 text-center text-muted-foreground">Polaroid moments together</p>
+        <p className="mb-10 text-center text-sm text-muted-foreground sm:text-base">ကိုကို နဲ့ ဘေဘီ ရဲ့ Polaroid moments</p>
 
-        <div className="grid grid-cols-2 gap-6 sm:grid-cols-3">
+        <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 sm:gap-6">
           {photos.map((p, i) => (
             <motion.button
               key={i}

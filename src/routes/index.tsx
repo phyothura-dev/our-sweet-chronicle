@@ -29,17 +29,30 @@ export const Route = createFileRoute("/")({
   component: Index,
 });
 
+const SONG_ID = "5HZ9qeFjhYk"; // Zack Tabudlo - Give Me Your Forever
+
 function Index() {
-  const [musicOn, setMusicOn] = useState(false);
+  const [musicOn, setMusicOn] = useState(true);
   const [burst, setBurst] = useState(0);
   const journeyRef = useRef<HTMLDivElement>(null);
-  const audioRef = useRef<HTMLAudioElement | null>(null);
 
+  // Try to auto-start music after first user interaction (browsers block autoplay with sound)
   useEffect(() => {
-    if (!audioRef.current) return;
-    if (musicOn) audioRef.current.play().catch(() => setMusicOn(false));
-    else audioRef.current.pause();
-  }, [musicOn]);
+    const tryStart = () => {
+      setMusicOn(true);
+      window.removeEventListener("click", tryStart);
+      window.removeEventListener("touchstart", tryStart);
+      window.removeEventListener("keydown", tryStart);
+    };
+    window.addEventListener("click", tryStart, { once: true });
+    window.addEventListener("touchstart", tryStart, { once: true });
+    window.addEventListener("keydown", tryStart, { once: true });
+    return () => {
+      window.removeEventListener("click", tryStart);
+      window.removeEventListener("touchstart", tryStart);
+      window.removeEventListener("keydown", tryStart);
+    };
+  }, []);
 
   const handleJourney = () => {
     setBurst((b) => b + 1);
@@ -53,10 +66,15 @@ function Index() {
       <FloatingBackgroundHearts />
       <HeartBurst trigger={burst} />
 
-      {/* Optional bg music — replace src with your file */}
-      <audio ref={audioRef} loop preload="none">
-        <source src="/music.mp3" type="audio/mpeg" />
-      </audio>
+      {/* Hidden YouTube player for background music — auto loops */}
+      {musicOn && (
+        <iframe
+          title="bg-music"
+          src={`https://www.youtube.com/embed/${SONG_ID}?autoplay=1&loop=1&playlist=${SONG_ID}&controls=0&modestbranding=1&playsinline=1`}
+          allow="autoplay"
+          className="pointer-events-none fixed -left-[9999px] -top-[9999px] h-px w-px opacity-0"
+        />
+      )}
 
       <Landing
         onJourney={handleJourney}
@@ -73,8 +91,8 @@ function Index() {
       <LoveLetter />
       <Surprise />
 
-      <footer className="pb-10 text-center text-sm text-muted-foreground">
-        Made with 💕 just for you
+      <footer className="pb-10 text-center text-xs text-muted-foreground sm:text-sm">
+        Made with 💕 by ကိုကို for ဘေဘီ
       </footer>
     </main>
   );

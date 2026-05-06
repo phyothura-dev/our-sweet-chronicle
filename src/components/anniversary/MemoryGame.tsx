@@ -98,7 +98,7 @@ export function MemoryGame() {
           animate={{ opacity: 1, y: 0 }}
           className="mt-6 text-center text-xl font-display text-primary"
         >
-          🎉 မင်းနိုင်ပြီ! {moves} moves နဲ့ပြီးသွားပြီ ✨
+          🎉 ဘေဘီနိုင်ပြီ! {moves} moves နဲ့ပြီးသွားပြီ ✨
         </motion.p>
       )}
     </div>
