@@ -98,16 +98,14 @@ function Index() {
 
       <Landing onJourney={handleJourney} />
 
-      <Suspense fallback={null}>
-        <div ref={journeyRef}>
-          <Timeline />
-        </div>
-        <Gallery />
-        <Promises />
-        <Games />
-        <LoveLetter />
-        <Surprise />
-      </Suspense>
+      <div ref={journeyRef}>
+        <Timeline />
+      </div>
+      <Gallery />
+      <Promises />
+      <Games />
+      <LoveLetter />
+      <Surprise />
 
       <footer className="pb-10 text-center text-xs text-muted-foreground sm:text-sm">
         Made with 💕 by ကိုကို for ဘေဘီ
