@@ -1,28 +1,49 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { useEffect, useRef, useState } from "react";
+import { lazy, Suspense, useEffect, useRef, useState } from "react";
 import { Landing } from "@/components/anniversary/Landing";
-import { Timeline } from "@/components/anniversary/Timeline";
-import { Gallery } from "@/components/anniversary/Gallery";
-import { Promises } from "@/components/anniversary/Promises";
-import { Games } from "@/components/anniversary/Games";
-import { LoveLetter } from "@/components/anniversary/LoveLetter";
-import { Surprise } from "@/components/anniversary/Surprise";
 import { HeartBurst, FloatingBackgroundHearts } from "@/components/anniversary/Hearts";
+
+const Timeline = lazy(() => import("@/components/anniversary/Timeline").then(m => ({ default: m.Timeline })));
+const Gallery = lazy(() => import("@/components/anniversary/Gallery").then(m => ({ default: m.Gallery })));
+const Promises = lazy(() => import("@/components/anniversary/Promises").then(m => ({ default: m.Promises })));
+const Games = lazy(() => import("@/components/anniversary/Games").then(m => ({ default: m.Games })));
+const LoveLetter = lazy(() => import("@/components/anniversary/LoveLetter").then(m => ({ default: m.LoveLetter })));
+const Surprise = lazy(() => import("@/components/anniversary/Surprise").then(m => ({ default: m.Surprise })));
+
+const SITE_TITLE = "Happy 1 Year Anniversary 💕 — ကိုကို & ဘေဘီ";
+const SITE_DESC = "Our love story — a romantic interactive journey through one beautiful year together. Timeline, gallery, mini games, and a surprise.";
 
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Happy 1 Year Anniversary 💕" },
-      { name: "description", content: "Our love story — a romantic journey through one beautiful year together." },
-      { property: "og:title", content: "Happy 1 Year Anniversary 💕" },
-      { property: "og:description", content: "A little surprise built with love, just for you." },
+      { title: SITE_TITLE },
+      { name: "description", content: SITE_DESC },
+      { name: "keywords", content: "anniversary, love, ကိုကို, ဘေဘီ, 1 year, romantic, surprise" },
+      { property: "og:title", content: SITE_TITLE },
+      { property: "og:description", content: SITE_DESC },
+      { property: "og:type", content: "website" },
+      { name: "twitter:title", content: SITE_TITLE },
+      { name: "twitter:description", content: SITE_DESC },
     ],
     links: [
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "" },
+      { rel: "preconnect", href: "https://www.youtube.com" },
       {
         rel: "stylesheet",
         href: "https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=Quicksand:wght@400;500;600&display=swap",
+      },
+    ],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "WebSite",
+          name: SITE_TITLE,
+          description: SITE_DESC,
+          inLanguage: "my",
+        }),
       },
     ],
   }),
@@ -78,14 +99,16 @@ function Index() {
 
       <Landing onJourney={handleJourney} />
 
-      <div ref={journeyRef}>
-        <Timeline />
-      </div>
-      <Gallery />
-      <Promises />
-      <Games />
-      <LoveLetter />
-      <Surprise />
+      <Suspense fallback={null}>
+        <div ref={journeyRef}>
+          <Timeline />
+        </div>
+        <Gallery />
+        <Promises />
+        <Games />
+        <LoveLetter />
+        <Surprise />
+      </Suspense>
 
       <footer className="pb-10 text-center text-xs text-muted-foreground sm:text-sm">
         Made with 💕 by ကိုကို for ဘေဘီ
