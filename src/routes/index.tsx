@@ -1,14 +1,13 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { lazy, Suspense, useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Landing } from "@/components/anniversary/Landing";
+import { Timeline } from "@/components/anniversary/Timeline";
+import { Gallery } from "@/components/anniversary/Gallery";
+import { Promises } from "@/components/anniversary/Promises";
+import { Games } from "@/components/anniversary/Games";
+import { LoveLetter } from "@/components/anniversary/LoveLetter";
+import { Surprise } from "@/components/anniversary/Surprise";
 import { HeartBurst, FloatingBackgroundHearts } from "@/components/anniversary/Hearts";
-
-const Timeline = lazy(() => import("@/components/anniversary/Timeline").then(m => ({ default: m.Timeline })));
-const Gallery = lazy(() => import("@/components/anniversary/Gallery").then(m => ({ default: m.Gallery })));
-const Promises = lazy(() => import("@/components/anniversary/Promises").then(m => ({ default: m.Promises })));
-const Games = lazy(() => import("@/components/anniversary/Games").then(m => ({ default: m.Games })));
-const LoveLetter = lazy(() => import("@/components/anniversary/LoveLetter").then(m => ({ default: m.LoveLetter })));
-const Surprise = lazy(() => import("@/components/anniversary/Surprise").then(m => ({ default: m.Surprise })));
 
 const SITE_TITLE = "Happy 1 Year Anniversary 💕 — ကိုကို & ဘေဘီ";
 const SITE_DESC = "Our love story — a romantic interactive journey through one beautiful year together. Timeline, gallery, mini games, and a surprise.";
@@ -99,16 +98,14 @@ function Index() {
 
       <Landing onJourney={handleJourney} />
 
-      <Suspense fallback={null}>
-        <div ref={journeyRef}>
-          <Timeline />
-        </div>
-        <Gallery />
-        <Promises />
-        <Games />
-        <LoveLetter />
-        <Surprise />
-      </Suspense>
+      <div ref={journeyRef}>
+        <Timeline />
+      </div>
+      <Gallery />
+      <Promises />
+      <Games />
+      <LoveLetter />
+      <Surprise />
 
       <footer className="pb-10 text-center text-xs text-muted-foreground sm:text-sm">
         Made with 💕 by ကိုကို for ဘေဘီ
