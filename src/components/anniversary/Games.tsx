@@ -2,15 +2,15 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import { Quiz } from "./Quiz";
 import { MemoryGame } from "./MemoryGame";
-import { SpinWheel } from "./SpinWheel";
+// import { SpinWheel } from "./SpinWheel";
 
 type Tab = "quiz" | "memory" | "wheel";
 
 export function Games() {
-  const [tab, setTab] = useState<Tab>("wheel");
+  const [tab, setTab] = useState<Tab>("quiz");
 
   const tabs: { id: Tab; label: string }[] = [
-    { id: "wheel", label: "Spin Wheel 🎡" },
+    // { id: "wheel", label: "Spin Wheel 🎡" },
     { id: "quiz", label: "Quiz 💭" },
     { id: "memory", label: "Memory 🧠" },
   ];
@@ -46,7 +46,7 @@ export function Games() {
 
         {tab === "quiz" && <Quiz />}
         {tab === "memory" && <MemoryGame />}
-        {tab === "wheel" && <SpinWheel />}
+        {/* {tab === "wheel" && <SpinWheel />} */}
       </div>
     </section>
   );

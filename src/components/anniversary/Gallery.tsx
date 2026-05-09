@@ -3,12 +3,12 @@ import { motion, AnimatePresence } from "framer-motion";
 import { X } from "lucide-react";
 
 const photos = [
-  { src: "https://images.unsplash.com/photo-1519741497674-611481863552?w=800&q=80", caption: "Forever yours 💕" },
-  { src: "https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?w=800&q=80", caption: "Sunshine days ☀️" },
-  { src: "https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?w=800&q=80", caption: "My favorite person 🥰" },
-  { src: "https://images.unsplash.com/photo-1518199266791-5375a83190b7?w=800&q=80", caption: "Adventures with you 🌍" },
-  { src: "https://images.unsplash.com/photo-1494774157365-9e04c6720e47?w=800&q=80", caption: "Quiet moments 🤍" },
-  { src: "https://images.unsplash.com/photo-1502635385003-ee1e6a1a742d?w=800&q=80", caption: "Always laughing 😂" },
+  { src: "public/galleries/gallary1.jpg", caption: "Forever yours 💕" },
+  { src: "public/galleries/gallary2.jpg", caption: "Sunshine days ☀️" },
+  { src: "public/galleries/gallary3.jpg", caption: "My favorite person 🥰" },
+  { src: "public/galleries/gallary4.jpg", caption: "Adventures with you 🌍" },
+  { src: "public/galleries/gallary5.jpg", caption: "Quiet moments 🤍" },
+  { src: "public/galleries/gallary6.jpg", caption: "Always laughing 😂" },
 ];
 
 export function Gallery() {

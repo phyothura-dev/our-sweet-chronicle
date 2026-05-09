@@ -5,31 +5,31 @@ const events = [
     date: "ပထမဆုံးတွေ့ခဲ့တဲ့နေ့",
     title: "First Meeting 👀",
     caption: "ဘေဘီကိုပထမဆုံးတွေ့တုန်းက ကိုကိုနှလုံးသား ခုန်တာ မရပ်တော့ဘူး။",
-    img: "https://images.unsplash.com/photo-1518621736915-f3b1c41bfd00?w=800&q=80",
+    img: "/timelines/timeline1.jpg",
   },
   {
-    date: "ပထမဆုံး Date",
-    title: "Our First Date 🍰",
-    caption: "Coffee တစ်ခွက်နဲ့စတင်ခဲ့တဲ့ ကျွန်တော်တို့ရဲ့ပထမဆုံးပုံပြင်။",
-    img: "https://images.unsplash.com/photo-1495567720989-cebdbdd97913?w=800&q=80",
+    date: "ပထမဆုံး Zoo Date",
+    title: "Our Zoo Date 🐘",
+    caption: "Zoo မှာ လျှောက်လည်ပြီး တိရစ္ဆာန်လေးတွေကြည့်ရင်း အတူရယ်မောခဲ့တဲ့ ပထမဆုံး Date လေး။",
+    img: "/timelines/timeline2.jpg",
   },
   {
     date: "First 'I love you' 💌",
     title: "ပထမဆုံးပြောခဲ့တဲ့စကား",
     caption: "ဘေဘီကိုချစ်တယ်လို့ပြောခဲ့တဲ့အခိုက်အတန့်ကို ကိုကိုဘယ်တော့မှမမေ့ပါဘူး။",
-    img: "https://images.unsplash.com/photo-1502635385003-ee1e6a1a742d?w=800&q=80",
+    img: "/timelines/timeline3.jpg",
   },
   {
-    date: "Adventures Together 🌍",
-    title: "အမှတ်တရခရီးများ",
-    caption: "ဘေဘီနဲ့အတူရှိရင် နေရာတိုင်းက အိမ်လိုခံစားရတယ်။",
-    img: "https://images.unsplash.com/photo-1529635509242-960e7b9ce39c?w=800&q=80",
+    date: "Our Little Moments ✨",
+    title: "အမှတ်တရ အခိုက်အတန့်လေးတွေ",
+    caption: "ခရီးမသွားရသေးပေမယ့် အတူနေရတဲ့နေ့စဉ်လေးတွေ၊ မက်ဆေ့ချ်လေးတွေ၊ ဓာတ်ပုံလေးတွေကပဲ အမှတ်တရအကြီးဆုံးတွေ ဖြစ်နေပြီ။",
+    img: "/timelines/timeline4.jpg",
   },
   {
     date: "1 Year Together 🎉",
     title: "ဒီနေ့",
     caption: "နှစ်တစ်နှစ်ပြည့်ပြီ။ ရှေ့ဆက်ပြီးတော့လည်း ဘေဘီနဲ့ပဲ။",
-    img: "https://images.unsplash.com/photo-1518199266791-5375a83190b7?w=800&q=80",
+    img: "/timelines/timeline5.jpg",
   },
 ];
 
@@ -45,9 +45,7 @@ export function Timeline() {
         >
           Our Journey 💞
         </motion.h2>
-        <p className="mb-16 text-center text-muted-foreground">
-          ကိုကိုနဲ့ဘေဘီရဲ့ပုံပြင်လေး...
-        </p>
+        <p className="mb-16 text-center text-muted-foreground">ကိုကိုနဲ့ဘေဘီရဲ့ပုံပြင်လေး...</p>
 
         <div className="relative">
           <div className="absolute left-4 top-0 h-full w-1 rounded-full bg-gradient-to-b from-primary via-accent to-secondary sm:left-1/2 sm:-translate-x-1/2" />
@@ -61,7 +59,7 @@ export function Timeline() {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true, amount: 0.3 }}
                 transition={{ duration: 0.6 }}
-                className={`relative mb-12 flex flex-col items-start sm:items-center ${
+                className={`relative mb-1 flex flex-col items-start sm:items-center ${
                   left ? "sm:flex-row" : "sm:flex-row-reverse"
                 }`}
               >
@@ -71,7 +69,7 @@ export function Timeline() {
                       src={e.img}
                       alt={e.title}
                       loading="lazy"
-                      className="mb-4 h-48 w-full rounded-2xl object-cover"
+                      className="mb-4 h-52 w-full rounded-2xl object-cover"
                     />
                     <p className="text-sm font-semibold text-primary">{e.date}</p>
                     <h3 className="mt-1 text-3xl">{e.title}</h3>

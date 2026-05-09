@@ -1,25 +1,14 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { Music, VolumeX, Heart } from "lucide-react";
+import { Heart } from "lucide-react";
 
 interface Props {
   onJourney: () => void;
-  musicOn: boolean;
-  toggleMusic: () => void;
 }
 
-export function Landing({ onJourney, musicOn, toggleMusic }: Props) {
+export function Landing({ onJourney }: Props) {
   return (
     <section className="relative flex min-h-screen flex-col items-center justify-center px-4 text-center sm:px-6">
-      <button
-        onClick={toggleMusic}
-        aria-label="Toggle music"
-        className="absolute right-3 top-3 flex items-center gap-2 rounded-full bg-card/80 px-3 py-1.5 text-xs shadow-md backdrop-blur transition hover:scale-105 sm:right-4 sm:top-4 sm:px-4 sm:py-2 sm:text-sm"
-      >
-        {musicOn ? <Music className="h-4 w-4 text-primary" /> : <VolumeX className="h-4 w-4" />}
-        <span>{musicOn ? "Music On" : "Music Off"}</span>
-      </button>
-
       <motion.div
         initial={{ scale: 0, rotate: -30 }}
         animate={{ scale: 1, rotate: 0 }}

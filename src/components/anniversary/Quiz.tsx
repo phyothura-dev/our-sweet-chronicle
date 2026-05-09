@@ -4,14 +4,14 @@ import { Button } from "@/components/ui/button";
 
 const questions = [
   {
-    q: "ကိုကိုအကြိုက်ဆုံးအစားအစာက ဘာလဲ?",
-    options: ["Pizza 🍕", "Sushi 🍣", "Mohinga 🍜", "Ice cream 🍦"],
-    answer: 2,
+    q: "ကိုကိုအကြိုက်ဆုံးအစားအစာက ဘာလဲ? 🍽️",
+    options: ["ကွေ့သယို 🍜",  "နန်းကြီးသုပ် 🍜","မာလာရှမ်းကော 🌶️", "ကြက်ကြော် 🍗"],
+    answer: 0,
   },
   {
     q: "ကိုကိုနဲ့ဘေဘီ ပထမဆုံးတွေ့ခဲ့တဲ့နေရာက?",
-    options: ["Coffee shop ☕", "School 🏫", "Park 🌳", "Online 💻"],
-    answer: 0,
+    options: ["Coffee shop ☕", "Hledan Center 🏦", "Park 🌳", "Movie theater 🎬"],
+    answer: 1,
   },
   {
     q: "ကိုကို့အကြိုက်ဆုံးအရောင်က?",

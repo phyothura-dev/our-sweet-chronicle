@@ -5,8 +5,6 @@ const promises = [
   { icon: "👂", text: "ဘေဘီပြောတာတွေကို စိတ်ရှည်ရှည်နဲ့နားထောင်ပေးမယ်" },
   { icon: "🤗", text: "စိတ်ညစ်တဲ့အချိန် အရင်ဆုံးပွေ့ဖက်ပေးမယ်" },
   { icon: "😄", text: "နေ့တိုင်း အပြုံးတစ်ပွင့်လောက်ပေးနိုင်အောင်ကြိုးစားမယ်" },
-  { icon: "🌧️", text: "မိုးရွာရွာ နေပူပူ ဘေဘီနဲ့အတူရှိနေမယ်" },
-  { icon: "♾️", text: "ဘေဘီကို တစ်သက်လုံးချစ်နေမှာပါ" },
 ];
 
 export function Promises() {
@@ -17,13 +15,11 @@ export function Promises() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="mb-3 text-center text-4xl text-primary sm:text-6xl"
+          className="mb-10 text-center text-4xl text-primary sm:text-5xl"
         >
           ကိုကိုရဲ့ ကတိတွေ 🤍
         </motion.h2>
-        <p className="mb-10 text-center text-sm text-muted-foreground sm:text-base">
-          ဘေဘီအတွက် ကိုကိုပေးချင်တဲ့ ကတိလေးတွေ...
-        </p>
+
 
         <div className="grid gap-3 sm:grid-cols-2 sm:gap-4">
           {promises.map((p, i) => (

@@ -29,17 +29,18 @@ export const Route = createFileRoute("/")({
   component: Index,
 });
 
-const SONG_ID = "5HZ9qeFjhYk"; // Zack Tabudlo - Give Me Your Forever
+const SONG_ID = "SZ4hs-ie0jA"; // Zack Tabudlo - Give Me Your Forever
+const SONG_START_SECONDS = 24; // 0:24
 
 function Index() {
-  const [musicOn, setMusicOn] = useState(true);
   const [burst, setBurst] = useState(0);
+  const [playerKey, setPlayerKey] = useState(0);
   const journeyRef = useRef<HTMLDivElement>(null);
 
-  // Try to auto-start music after first user interaction (browsers block autoplay with sound)
+  // Ensure playback starts after first user interaction (browsers may block autoplay with sound)
   useEffect(() => {
     const tryStart = () => {
-      setMusicOn(true);
+      setPlayerKey((k) => k + 1);
       window.removeEventListener("click", tryStart);
       window.removeEventListener("touchstart", tryStart);
       window.removeEventListener("keydown", tryStart);
@@ -67,20 +68,15 @@ function Index() {
       <HeartBurst trigger={burst} />
 
       {/* Hidden YouTube player for background music — auto loops */}
-      {musicOn && (
-        <iframe
-          title="bg-music"
-          src={`https://www.youtube.com/embed/${SONG_ID}?autoplay=1&loop=1&playlist=${SONG_ID}&controls=0&modestbranding=1&playsinline=1`}
-          allow="autoplay"
-          className="pointer-events-none fixed -left-[9999px] -top-[9999px] h-px w-px opacity-0"
-        />
-      )}
-
-      <Landing
-        onJourney={handleJourney}
-        musicOn={musicOn}
-        toggleMusic={() => setMusicOn((m) => !m)}
+      <iframe
+        key={playerKey}
+        title="bg-music"
+        src={`https://www.youtube.com/embed/${SONG_ID}?autoplay=1&start=${SONG_START_SECONDS}&loop=1&playlist=${SONG_ID}&controls=0&modestbranding=1&playsinline=1`}
+        allow="autoplay; encrypted-media"
+        className="pointer-events-none fixed -left-[9999px] -top-[9999px] h-px w-px opacity-0"
       />
+
+      <Landing onJourney={handleJourney} />
 
       <div ref={journeyRef}>
         <Timeline />
