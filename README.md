@@ -67,7 +67,3 @@ src/
 Update content (names, dates, photos, messages) inside the components in
 `src/components/anniversary/`. Background music track id lives in
 `src/routes/index.tsx`.
-
-## 📜 License
-
-Private — a personal gift project.
