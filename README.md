@@ -1,23 +1,21 @@
-# Happy 1 Year Anniversary 💕
+# Anniversary Web App 💕
 
-A romantic, interactive one-year anniversary website built with love — featuring a love story timeline, photo gallery, mini games (Spin The Wheel, Quiz, Memory Match), promises, a love letter, and a final surprise with confetti.
-
-> Made with 💕 by **ကိုကို** for **ဘေဘီ**
+An interactive, romantic one-year anniversary website — a personal gift built as a single-page experience with a love story timeline, photo gallery, mini games, promises, a love letter, and a final surprise.
 
 ## ✨ Features
 
 - 🌸 **Romantic Landing** — soft animations & floating hearts
-- 📅 **Timeline** — our journey, month by month
+- 📅 **Timeline** — the journey, month by month
 - 🖼️ **Gallery** — favorite memories
-- 🤍 **Promises** — ကိုကိုရဲ့ ကတိတွေ
+- 🤍 **Promises** — heartfelt commitments
 - 🎮 **Mini Games**
   - 🎡 Spin The Wheel — romantic & funny rewards
   - ❓ Love Quiz
   - 🧠 Memory Match
 - 💌 **Love Letter**
 - 🎉 **Final Surprise** — hidden message + confetti
-- 🎵 **Background Music** — Zack Tabudlo · *Give Me Your Forever* (auto-replay)
-- 📱 **Fully Responsive** — looks beautiful on phone, tablet, desktop
+- 🎵 **Background Music** — auto-replay with toggle
+- 📱 **Fully Responsive** — phone, tablet, desktop
 
 ## 🛠️ Tech Stack
 
@@ -66,12 +64,10 @@ src/
 
 ## 💝 Personalization
 
-Nicknames are used throughout:
-- **ဘေဘီ** — her
-- **ကိုကို** — me
-
-To customize, search & replace in `src/components/anniversary/`.
+Update content (names, dates, photos, messages) inside the components in
+`src/components/anniversary/`. Background music track id lives in
+`src/routes/index.tsx`.
 
 ## 📜 License
 
-Private — made for one special person 💕
+Private — a personal gift project.
