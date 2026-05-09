@@ -35,6 +35,14 @@ export const Route = createRootRoute({
       { property: "og:type", content: "website" },
       { property: "og:locale", content: "my_MM" },
       { name: "twitter:card", content: "summary_large_image" },
+      { title: "Our One Year Anniversary" },
+      { property: "og:title", content: "Our One Year Anniversary" },
+      { name: "twitter:title", content: "Our One Year Anniversary" },
+      { name: "description", content: "An interactive, romantic one-year anniversary website — a personal gift built as a single-page experience with a love story timeline, photo gallery, mini games," },
+      { property: "og:description", content: "An interactive, romantic one-year anniversary website — a personal gift built as a single-page experience with a love story timeline, photo gallery, mini games," },
+      { name: "twitter:description", content: "An interactive, romantic one-year anniversary website — a personal gift built as a single-page experience with a love story timeline, photo gallery, mini games," },
+      { property: "og:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/FlTgAE6rmCbWj5ax28WcPFvTku03/social-images/social-1778340180526-timeline4.webp" },
+      { name: "twitter:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/FlTgAE6rmCbWj5ax28WcPFvTku03/social-images/social-1778340180526-timeline4.webp" },
     ],
     links: [
       {
