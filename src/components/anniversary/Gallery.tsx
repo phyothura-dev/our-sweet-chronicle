@@ -3,12 +3,12 @@ import { motion, AnimatePresence } from "framer-motion";
 import { X } from "lucide-react";
 
 const photos = [
-  { src: "public/galleries/gallary1.jpg", caption: "Forever yours 💕" },
-  { src: "public/galleries/gallary2.jpg", caption: "Sunshine days ☀️" },
-  { src: "public/galleries/gallary3.jpg", caption: "My favorite person 🥰" },
-  { src: "public/galleries/gallary4.jpg", caption: "Adventures with you 🌍" },
-  { src: "public/galleries/gallary5.jpg", caption: "Quiet moments 🤍" },
-  { src: "public/galleries/gallary6.jpg", caption: "Always laughing 😂" },
+  { src: "/galleries/gallary1.jpg", caption: "Forever yours 💕" },
+  { src: "/galleries/gallary2.jpg", caption: "Sunshine days ☀️" },
+  { src: "/galleries/gallary3.jpg", caption: "My favorite person 🥰" },
+  { src: "/galleries/gallary4.jpg", caption: "Adventures with you 🌍" },
+  { src: "/galleries/gallary5.jpg", caption: "Quiet moments 🤍" },
+  { src: "/galleries/gallary6.jpg", caption: "Always laughing 😂" },
 ];
 
 export function Gallery() {
